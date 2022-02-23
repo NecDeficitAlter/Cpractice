@@ -1,0 +1,901 @@
+/*
+#include<stdio.h>
+
+int read(int a);
+
+int main(void)
+{
+    int a;
+    printf("This is your number: %d", read(a));
+    return 0;
+    }
+
+int read(int a)
+    {
+        int number;
+        printf("Enter your number:");
+        scanf("%d", &a);
+        number = a;
+        return number;
+
+    }
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+
+int a, b, c, d ;
+  
+    return 0;
+}*/
+
+/*
+Problem TWO
+#include <stdio.h>
+
+
+struct ElVal {
+  int sixElement [6];
+  int sixElementCopy [6];
+  
+};
+
+int valCopy (struct ElVal a) { 
+
+  
+
+  int i;
+ 
+  for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+
+for(i = 0; i<6; i++ ) {
+    a.sixElementCopy[i] = a.sixElement[i];
+}
+
+printf ("\n\n %d value has been copied \n\n", i);
+
+   for(i = 0; i < 6; i++) {
+      printf("   %2d        %2d\n", a.sixElement[i], a.sixElementCopy[i]);
+   } }
+   
+
+
+
+int main() {
+
+struct ElVal a;
+
+valCopy(a);
+   
+return 0;
+}
+*/
+
+/* 
+PROBLEM 3
+#include <stdio.h>
+
+int main(void)
+{
+
+int c, d, e ;
+
+int Compare (int a, int b) {
+    if (a < b)
+    {
+        printf("1");
+    }
+    if (a == b){
+        printf("0");
+       } 
+    if (a > b) {
+            printf(" -1");
+        }
+
+}
+
+
+printf("\nInput Value a\n");
+scanf("%d", &c);
+
+printf("\nInput Value b\n");
+scanf("%d", &d);
+Compare(c, d);
+
+
+return 0;
+  
+} */
+
+/* Problem FOUR
+#include <stdio.h>
+
+int main(void)
+{
+
+int c, d;
+
+int SumOf (int a) {
+    int b = 0;
+    if (a < 0)
+        printf("0");
+    else {for (int i = 1; i <= a; i++){ 
+	b += i; 
+
+} 
+printf ("%d\n", b); 
+    }}
+
+
+
+
+scanf("%i", &c);
+SumOf(c);
+
+return 0;
+} */
+
+/* Problem Five
+
+#include <stdio.h>
+
+
+struct Point {
+    float x, y;
+};
+
+
+float getDistance(struct Point a, struct Point b)
+{
+    float distance;
+    distance = ((a.x - b.x) * (a.x - b.x) + (a.y-b.y) *(a.y-b.y));
+    return distance;
+}
+
+
+
+int main()
+{
+    struct Point a, b;
+    printf("Enter coordinate of point a: ");
+    scanf("%f %f", &a.x, &a.y);
+    printf("Enter coordinate of point b: ");
+    scanf("%f %f", &b.x, &b.y);
+    printf("Distance between a and b: %f\n", getDistance(a, b));
+
+
+    return 0;
+}
+*/
+/* Problem 6
+#include <stdio.h>
+
+
+struct Point {
+    float x, y;
+};
+
+
+float getDistance(struct Point a, struct Point b)
+{
+    float distance;
+    distance = ((a.x - b.x) * (a.x - b.x) + (a.y-b.y) *(a.y-b.y));
+    return distance;
+}
+
+
+
+int main()
+{
+    struct Point a, b;
+    printf("Enter coordinate of point a: ");
+    scanf("%f %f", &a.x, &a.y);
+    b.x, b.y = 0;
+    printf("Distance between a and b: %f\n", getDistance(a, b));
+
+
+    return 0;
+*/
+
+/*
+Problem Seven
+#include <stdio.h>
+
+
+struct Point
+{
+  float x, y;
+};
+
+
+int SymEval (struct Point a, struct Point b)
+{
+  int SymCons;
+  if (a.x == b.x, a.y == -b.y)
+    {SymCons = 1;}
+  else { 
+    SymCons = 0;}
+  return SymCons;
+
+}
+
+
+
+int main ()
+{
+  struct Point a, b;
+  printf ("\nEnter coordinate of point a: \n");
+  scanf ("%f %f", &a.x, &a.y);
+  printf ("\nEnter coordinate of point b: \n");
+  scanf ("%f %f", &b.x, &b.y);
+  printf("the symmetry constant is %d", SymEval (a, b));
+}
+*/
+
+/* 
+Problem Eight
+
+#include <stdio.h>
+
+
+struct Point
+{
+  float x, y;
+};
+
+
+int SymEval (struct Point a, struct Point b)
+{
+  int SymCons;
+  if (a.y == b.y, a.x == -b.x)
+    {SymCons = 1;}
+  else { 
+    SymCons = 0;}
+  return SymCons;
+
+}
+
+
+
+int main ()
+{
+  struct Point a, b;
+  printf ("\nEnter coordinate of point a: \n");
+  scanf ("%f %f", &a.x, &a.y);
+  printf ("\nEnter coordinate of point b: \n");
+  scanf ("%f %f", &b.x, &b.y);
+  printf("the symmetry constant is %d", SymEval (a, b));
+}
+
+*/
+
+/* Problem 9
+ #include <stdio.h>
+
+
+struct Point {
+    float x, y;
+};
+
+
+int getQuadrant(struct Point a)
+{
+    int quadrant;
+     
+    if (a.x > 0 && a.y < 0){
+        quadrant = 4;}
+        if (a.x < 0 && a.y < 0) {
+                quadrant = 3;}
+            if (a.x < 0 && a.y > 0) {
+                quadrant = 2;}
+                if (a.x > 0 && a.y > 0) {
+                    quadrant = 1;} 
+    
+    return quadrant;
+}
+
+
+
+int main()
+{
+    struct Point a;
+    printf("Enter coordinate of point a: ");
+    scanf("%f %f", &a.x, &a.y);
+
+    printf("Your point is in quadrant %i \n", getQuadrant(a));
+
+
+;
+} */
+
+/*
+Problem 10
+#include <stdio.h>
+
+
+struct Point {
+    float x, y;
+};
+
+
+float findMidX (struct Point a, struct Point b)
+{
+    float c;
+    c = (a.x + b.x) / 2;
+    return c;
+}
+
+float findMidY(struct Point a, struct Point b)
+{
+    float c;
+    c = (a.y + b.y) / 2;
+    return c;
+}
+
+float findMidpoint(struct Point a, struct Point b)
+{
+    printf("Midpoint between a and b: %0.2f, %0.2f\n",  findMidX(a, b), findMidY(a, b));
+    
+}
+
+
+int main()
+{
+    struct Point a, b, c;
+    printf("Enter coordinate of point a: ");
+    scanf("%f %f", &a.x, &a.y);
+    printf("Enter coordinate of point b: ");
+    scanf("%f %f", &b.x, &b.y);
+    findMidpoint(a, b);
+
+
+    return 0;
+}
+
+*/
+
+/*
+Problem 11
+#include <stdio.h>
+
+struct MaxVal {
+    int sixElement [6];
+};
+
+int MaxOf (struct MaxVal a) {
+    
+    int max = 0;
+    int i;
+    
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+  max = a.sixElement[1];
+  for(i = 0; i < 6; i ++) {
+      if (max < a.sixElement[i])
+        max = a.sixElement[i];
+  }
+   printf("the max is %d", max);
+}
+
+
+
+int main(void){
+struct MaxVal a; 
+
+MaxOf(a);
+return 0;}
+*/
+
+/*
+Problem 12
+#include <stdio.h>
+
+struct MaxVal {
+    int sixElement [6];
+};
+
+int MaxOf (struct MaxVal a) {
+    
+    int max = 0;
+    int i;
+    int indexVal;
+    
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+  max = a.sixElement[1];
+  for(i = 0; i < 6; i ++) {
+      if (max < a.sixElement[i]) {
+        max = a.sixElement[i];
+          indexVal = i;
+      }
+  }
+   printf("the index of the maximum value is %d", indexVal);
+}
+
+
+
+int main(void){
+struct MaxVal a; 
+
+MaxOf(a);
+return 0;}
+*/
+/*
+Modified Number 12 given by Seminar
+#include <stdio.h>
+
+struct MaxVal {
+    int sixElement [6];
+};
+
+int MaxOf (struct MaxVal a) {
+    
+    int max = 0;
+    int i;
+    int indexVal;
+    
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+  indexVal = 1;
+  max = a.sixElement[indexVal];
+  for(i = 0; i < 6; i ++) {
+      if (max < a.sixElement[i]) {
+        max = a.sixElement[i];
+          indexVal = i;
+      }
+  }
+   printf("the index of the maximum value is %d", indexVal);
+}
+
+
+
+int main(void){
+struct MaxVal a; 
+
+MaxOf(a);
+return 0;}
+*/
+/*
+Problem 13
+#include <stdio.h>
+
+int sumOdd(int a, int b) {   
+    
+    int HoldVal, i, sum = 0;
+    if(a > b)
+    {
+        HoldVal  = a;
+        a = b;
+        b   = HoldVal;
+    }
+
+    printf("Odd numbers from %d to %d are\n", a, b);
+    for(i = a; i <= b; i++)
+    {
+        if(i % 2 != 0)
+        {
+            printf("%d\n", i);
+            sum = sum + i;
+        }
+    }
+
+    printf("Sum of all the Odd numbers from %d to %d is %d\n", a, b, sum);
+}
+
+int main()
+
+{
+    int start, end;
+
+    printf("Enter start and end value\n");
+    scanf("%d%d", &start, &end);
+
+    sumOdd(start, end);
+
+    return 0;
+*/
+/*
+Problem 14
+#include <stdio.h>
+
+struct ListVal {
+    int sixElement [6];
+};
+
+int Insight(struct ListVal a) {
+    
+    int checkVal = 0;
+    int i;
+    int ValCons;
+    printf("Input value to be checked");
+    scanf("%d", &checkVal);
+
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+  for(i = 0; i < 6; i ++) {
+      if (checkVal == a.sixElement[i]) {
+        ValCons = 1;
+            break; }
+        else ValCons = 0;
+  } return ValCons;}
+
+
+int main(void){
+    
+    struct ListVal a;
+    
+    
+
+ printf("%d", Insight(a));
+    
+
+
+return 0;}
+
+*/
+
+/*
+Problem 15
+#include <stdio.h>
+
+struct Books {
+    char bookname[50];
+    int bookmark;
+};
+
+    int getBook(struct Books a) {
+    
+    printf("Please input book name \n");
+    scanf("%s",  a.bookname);
+    printf("Please input page number \n");
+    scanf("%d", &a.bookmark);
+    
+    printf ("your book info is %s, page %d", a.bookname, a.bookmark);
+    
+    return 0;
+;}
+
+int main(void) {
+    
+    struct Books a;
+    
+    getBook(a);
+    return 0;
+}
+*/
+
+/*
+Problem 16
+#include <stdio.h>
+
+struct Address {
+    char street_name[50];
+    int street_number;
+    int zip_code;
+};
+
+    int getAddress(struct Address a) {
+    
+    printf("Please input street name");
+    scanf("%s",  a.street_name);
+    printf("Please input street number");
+    scanf("%d", &a.street_number);
+    printf("Please input zip_code");
+    scanf("%d", &a.zip_code);
+    
+    printf ("your adress is %d %s, %d", a.street_number, a.street_name, a.zip_code);
+    
+    return 0;
+;}
+
+int main(void) {
+    
+    struct Address a;
+    
+    getAddress(a);
+    return 0;
+}
+
+*/
+
+/*
+Problem 17
+#include <stdio.h>
+
+struct AvgList {
+    float sixElement [6];
+};
+
+float Average (struct AvgList a) {
+   float sum = 0;
+    float avg = 0;
+    float avgCons = 0;
+    
+    int i;
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%f", &a.sixElement[i]);
+  }
+  for(i = 0; i < 6; i ++) {
+      sum = sum + a.sixElement[i];
+      if (a.sixElement[i] != 0)
+        avgCons = avgCons + 1;
+  }
+   avg = sum/avgCons;
+  printf("the average is %f", avg);
+   
+}
+
+
+int main(void){
+    
+struct AvgList a;
+
+Average(a);
+  
+  
+return 0;}
+*/
+
+/*
+Problem 18
+#include <stdio.h>
+
+struct date {
+    char month[50];
+    int day;
+    int year;
+};
+
+    int getDate(struct date a) {
+    
+    printf("Please input month");
+    scanf("%s",  a.month);
+    printf("Please input day");
+    scanf("%d", &a.day);
+    printf("Please input year");
+    scanf("%d", &a.year);
+    
+    printf ("your address is %d %s, %d", a.day, a.month, a.year);
+    
+    return 0;
+;}
+
+int main(void) {
+    
+    struct date a;
+    
+    getDate(a);
+    return 0;
+}
+
+*/
+
+/*
+Problem 20
+#include <stdio.h>
+
+int main(void){
+    
+    int myGrade;
+   
+
+int letterVal(int a) {
+    if (a <= 70) { printf ("D"); 
+      } ;
+      if (a <= 80 && a >= 71){
+          printf("C");
+      }
+        if (a <= 90 && a >= 81){
+            printf("B");}
+            if (a <= 100 && a >= 91) {
+                printf("A");
+            }
+            
+}
+    
+scanf("%d", &myGrade);
+letterVal(myGrade);
+
+    
+  
+return 0;}
+*/
+
+/*
+Problem 21
+#include <stdio.h>
+
+int main(void){
+    
+    int minutes;
+    int hours;
+
+int minConv(int a, int b) {
+    hours = a / 60;
+    printf("your value in hours is %d", hours);
+}
+    
+scanf("%d", &minutes);
+minConv(minutes, hours);
+
+    
+  
+return 0;}
+*/
+
+/* 
+Problem 22
+#include <stdio.h>
+
+int main(void){
+    
+    int meters;
+    int inches;
+
+int metConv(int a, int b) {
+    b = a*40;
+    printf("your value in inches is %d", b);
+}
+    
+scanf("%d", &meters);
+metConv(meters, inches);
+
+    
+  
+return 0;}
+*/
+
+/*
+Problem 23
+#include <stdio.h>
+
+struct ListVal {
+    int sixElement [6];
+};
+
+int printOdd (struct ListVal a) {
+    int i;
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+    for(i = 0; i < 6; i ++)
+  {
+    if (a.sixElement[i]%2 == 0){
+        printf("\n %d \n", a.sixElement[i]);
+    } }
+    
+}
+
+
+int main(void){
+    
+struct ListVal a;
+
+printOdd(a);
+
+return 0;}
+
+*/
+
+/*
+Problem 24
+#include<stdio.h>
+
+
+struct complex
+{
+    float real;
+    float imaginary;
+};
+
+int multiComplex (struct complex cnum1, struct complex cnum2) {
+    struct complex mul;
+    printf("Enter real and imaginary part of first complex number:\n");
+    scanf("%f%f", &cnum1.real, &cnum1.imaginary);
+    printf("Enter real and imaginary part of second complex number:\n");
+    scanf("%f%f", &cnum2.real, &cnum2.imaginary);
+
+    mul.real = cnum1.real * cnum2.real - cnum1.imaginary * cnum2.imaginary;
+    mul.imaginary = cnum1.real * cnum2.imaginary + cnum2.real * cnum1.imaginary;
+
+    printf("PRODUCT = %0.2f + i %0.2f", mul.real, mul.imaginary);
+}
+
+int main()
+{
+    
+    struct complex cnum1, cnum2;
+    
+    multiComplex(cnum1, cnum2);
+    return 0;
+}
+*/
+
+/*
+Problem 25
+#include <stdio.h>
+
+struct sumVal{    
+    int sixElement [6];
+
+};
+
+int sumArray (struct sumVal a) {    
+    int sum = 0;
+    int i;
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &a.sixElement[i]);
+  }
+
+  for(i = 0; i < 6; i ++) {
+      sum = sum + a.sixElement[i];
+  }
+  printf("the sum is %d", sum);
+  }
+
+
+int main(void){
+    
+struct sumVal a;
+
+sumArray(a);
+
+  
+return 0;}
+*/
+
+/* 
+Problem 26
+#include <stdio.h>
+
+int main(void){
+    
+    int sixElement [6];
+    int sum = 6;
+    
+    int i;
+     for(i = 0; i < 6; i ++)
+  {
+    printf("%d> ",i+1);
+    scanf("%d", &sixElement[i]);
+  }
+    for(i = 0; i < 6; i ++)
+  {
+    if (sixElement[i]%2 != 0){
+        sixElement[i] = 0;
+    }
+    printf("\n %d> \n", sixElement[i]);
+  }
+  for(i = 0; i < 6; i ++) {
+      if (sixElement[i] == 0) {
+      sum = sum - 1;}
+  }
+  printf("there are %d even values", sum);
+  
+return 0;}
+*/
